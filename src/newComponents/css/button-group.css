@@ -1,0 +1,34 @@
+.uik-button-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.uik-button-group:not(.uik-button-group--vertical) * + .uik-button {
+  margin-left: 15px;
+}
+
+.uik-button-group:not(.uik-button-group--vertical) * + .uik-button--small {
+  margin-left: 10px;
+}
+
+.uik-button-group:not(.uik-button-group--vertical) * + .uik-button--large {
+  margin-left: 20px;
+}
+
+.uik-button-group--vertical {
+  flex-direction: column;
+}
+
+.uik-button-group--vertical * + .uik-button {
+  margin-top: 15px;
+}
+
+.uik-button-group--vertical * + .uik-button--small {
+  margin-top: 10px;
+}
+
+.uik-button-group--vertical * + .uik-button--large {
+  margin-top: 20px;
+}
