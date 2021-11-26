@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+.uik-card--large-padding {
+  padding: 25px 30px;
+}
+
 .uik-card .uik-card__headline {
   font-size: 20px;
   color: var(--text);
