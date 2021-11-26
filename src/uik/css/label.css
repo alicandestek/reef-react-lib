@@ -1,0 +1,10 @@
+@import url(variables.css);
+
+.uik-label {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 3px;
+  margin-bottom: 5px;
+}

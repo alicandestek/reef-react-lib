@@ -4,6 +4,7 @@
 @import url(button-group.css);
 @import url(alert.css);
 @import url(form.css);
+@import url(label.css);
 
 * {
   box-sizing: border-box;
