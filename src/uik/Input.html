@@ -1,0 +1,48 @@
+<div class="uik-input">
+  <div class="uik-input__wrapper">
+      <input class="uik-input__input" name="inputName">
+
+      <!-- Label component with class 'uik-input__label' -->
+      <label for="inputName" class="uik-input__label uik-label">Label</label>
+
+      <div class="uik-input__line" aria-hidden="true"></div>
+  </div>
+</div>
+
+<!-- For placeholders simply use native placeholder attribute on input element -->
+<div class="uik-input">
+  <div class="uik-input__wrapper">
+      <input class="uik-input__input" name="inputName" placeholder="Some text ...">
+
+      <label for="inputName" class="uik-input__label uik-label">With placeholder</label>
+
+      <div class="uik-input__line" aria-hidden="true"></div>
+  </div>
+</div>
+
+<!--
+  For errors add class 'uik-input--error' to root element and
+  an additional div with class 'uik-input__error' that holds the error message
+-->
+<div class="uik-input uik-input--error">
+  <div class="uik-input__wrapper">
+      <div class="uik-input__error">There's a problem with the value you entered</div>
+
+      <input class="uik-input__input" name="inputName" value="Some text ...">
+
+      <label for="inputName" class="uik-input__label uik-label">Input</label>
+
+      <div class="uik-input__line" aria-hidden="true"></div>
+  </div>
+</div>
+
+<!-- For multiline input change input element to textarea -->
+<div class="uik-input">
+  <div class="uik-input__wrapper">
+      <textarea class="uik-input__input" name="inputName"></textarea>
+
+      <label for="inputName" class="uik-input__label uik-label">Multiline input</label>
+
+      <div class="uik-input__line" aria-hidden="true"></div>
+  </div>
+</div>

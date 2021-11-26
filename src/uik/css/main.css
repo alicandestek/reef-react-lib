@@ -5,6 +5,7 @@
 @import url(alert.css);
 @import url(form.css);
 @import url(label.css);
+@import url(input.css);
 
 * {
   box-sizing: border-box;
