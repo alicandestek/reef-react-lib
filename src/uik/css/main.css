@@ -7,6 +7,7 @@
 @import url(label.css);
 @import url(input.css);
 @import url(tooltip.css);
+@import url(text.css);
 
 * {
   box-sizing: border-box;
