@@ -63,12 +63,12 @@
 
 .uik-alert .uik-alert__close-btn:hover {
   opacity: 1;
-  color: var(--danger);
+  color: var(--primary);
   cursor: pointer;
 }
 
 .uik-alert .uik-alert__close-btn:active {
   opacity: 1;
-  color: var(--danger);
+  color: var(--primary);
   transform: scale(1.25);
 }
