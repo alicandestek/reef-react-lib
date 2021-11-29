@@ -10,6 +10,7 @@
 @import url(label.css);
 @import url(text.css);
 @import url(tooltip.css);
+@import url(modal.css);
 
 * {
   box-sizing: border-box;
