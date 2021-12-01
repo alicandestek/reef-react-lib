@@ -123,3 +123,32 @@
 .uik-button--success:active {
   background-color: #33b977; /* SASS: darken(var(--success), 7.5%) */
 }
+
+.uik-button--loading {
+  position: relative;
+  min-width: 40px;
+}
+
+.uik-button--loading .uik-button__text {
+  opacity: 0;
+}
+
+.uik-button .uik-loading {
+  position: absolute;
+}
+
+.uik-button .uik-loading__spinner {
+  width: 14px;
+  height: 14px;
+}
+
+.uik-button--large .uik-loading__spinner {
+  width: 18px;
+  height: 18px;
+}
+
+.uik-button--fill .uik-loading__spinner-dot::before,
+.uik-button--danger .uik-loading__spinner-dot::before,
+.uik-button--success .uik-loading__spinner-dot::before {
+  background: white;
+}
