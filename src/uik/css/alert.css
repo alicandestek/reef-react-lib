@@ -4,9 +4,9 @@
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.07);
-  padding: 20px 40px 20px 25px;
+  padding: 20px 25px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   position: fixed;
@@ -15,6 +15,32 @@
   z-index: 10;
   width: 30rem;
   max-width: calc(100% - 30px);
+}
+
+.uik-alert .uik-alert__content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 15px;
+}
+
+.uik-alert .uik-alert__buttons {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 0 5px 0;
+}
+
+.uik-alert .uik-alert__buttons > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.uik-alert .uik-alert__buttons > * + * {
+  margin-left: 15px;
 }
 
 .uik-alert .uik-alert__icon {
