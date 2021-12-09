@@ -1,4 +1,4 @@
-@import url(variables.css);
+@import url(./../variables.css);
 
 .uik-button {
   display: flex;
@@ -127,6 +127,7 @@
 .uik-button--loading {
   position: relative;
   min-width: 40px;
+  overflow: hidden;
 }
 
 .uik-button--loading .uik-button__text {
@@ -152,3 +153,44 @@
 .uik-button--success .uik-loading__spinner-dot::before {
   background: white;
 }
+
+.uik-button--loading .fish-graphics {
+  width: 26px;
+  position: absolute;
+  animation: uik-button-fish-animation 2s linear infinite;
+}
+
+.uik-button--loading.uik-button--large .fish-graphics {
+  width: 36px;
+}
+
+.uik-button--loading.uik-button--small .fish-graphics {
+  width: 20px;
+}
+
+@keyframes uik-button-fish-animation {
+  from, 10% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  90%, 100% {
+    left: 100%;
+    transform: none;
+  }
+}
+
+.uik-button--loading .fish-graphics .fin {
+  animation: uik-button-fish-animation-fin 0.3s linear infinite;
+}
+
+@keyframes uik-button-fish-animation-fin {
+  from, to {
+    transform: none;
+  }
+
+  50% {
+    transform: scaleX(0.85) translateX(5%);
+  }
+}
+
