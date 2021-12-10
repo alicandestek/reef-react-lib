@@ -154,43 +154,27 @@
   background: white;
 }
 
-.uik-button--loading .fish-graphics {
-  width: 26px;
+.uik-button--loading .fish-animation {
   position: absolute;
-  animation: uik-button-fish-animation 2s linear infinite;
+  height: 100%;
+  backdrop-filter: none;
 }
 
-.uik-button--loading.uik-button--large .fish-graphics {
+.uik-button--loading .fish-animation::before {
+  display: none;
+}
+
+.uik-button--loading .fish-animation__fish {
+  animation-duration: 2s;
+  width: 26px;
+}
+
+.uik-button--loading.uik-button--large .fish-animation__fish {
   width: 36px;
 }
 
-.uik-button--loading.uik-button--small .fish-graphics {
+.uik-button--loading.uik-button--small .fish-animation__fish {
   width: 20px;
 }
 
-@keyframes uik-button-fish-animation {
-  from, 10% {
-    left: 0;
-    transform: translateX(-100%);
-  }
-
-  90%, 100% {
-    left: 100%;
-    transform: none;
-  }
-}
-
-.uik-button--loading .fish-graphics .fin {
-  animation: uik-button-fish-animation-fin 0.3s linear infinite;
-}
-
-@keyframes uik-button-fish-animation-fin {
-  from, to {
-    transform: none;
-  }
-
-  50% {
-    transform: scaleX(0.85) translateX(5%);
-  }
-}
 

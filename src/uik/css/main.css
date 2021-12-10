@@ -12,6 +12,7 @@
 @import url(tooltip.css);
 @import url(modal.css);
 @import url(loading.css);
+@import url(fish-animation.css);
 
 * {
   box-sizing: border-box;
