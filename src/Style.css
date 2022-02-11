@@ -210,3 +210,28 @@ input[type=range]::-webkit-slider-thumb {
   transition: none;
   filter: brightness(1.2);
 }
+
+.btn-reef--transparent,
+.btn-reef--transparent:focus {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #681cff;
+}
+
+.btn-reef--transparent > * {
+  color: #681cff;
+}
+
+.btn-reef--transparent:hover {
+  box-shadow: inset 0 0 0 1px transparent, 0 0.313rem 1.25rem -0.625rem #fd3f83;
+  background-color: #681cff;
+}
+
+.btn-reef--transparent:hover > * {
+  color: white;
+}
+
+.btn-reef[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+  color: rgba(white, 0.5);
+}

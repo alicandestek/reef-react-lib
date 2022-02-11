@@ -4,14 +4,16 @@ import { BackIcon, DownArrowIcon, PlusIcon } from '../Icons';
 interface ButtonProps {
   onClick?: () => void;
   disabled?: boolean;
+  transparent?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   children,
   onClick = () => {},
   disabled,
+  transparent,
 }): JSX.Element => (
-  <button type="button" className="btn btn-reef border-rad" disabled={disabled} onClick={onClick}>
+  <button type="button" className={`btn btn-reef border-rad ${transparent ? 'btn-reef--transparent' : ''}`} disabled={disabled} onClick={onClick}>
     <span>{children}</span>
   </button>
 );
@@ -52,7 +54,7 @@ export const SwitchTokenButton = ({
     <div className="btn-content-field border-rad">
       <button
         type="button"
-        className="btn btn-field border-rad hover-border"
+        className="btn btn-reef border-rad btn-reef--transparent"
         onClick={onClick}
         disabled={disabled}
       >
