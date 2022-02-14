@@ -42,14 +42,13 @@ export const useUpdateTokensPrice = ({
         const reefPrice = await retrieveReefCoingeckoPrice();
         const baseRatio = poolRatio(pool);
         if (token1.address === REEF_TOKEN.address) {
-          updateTokens(reefPrice, reefPrice / baseRatio);
-        } else if (token2.address === REEF_TOKEN.address) {
           updateTokens(reefPrice, reefPrice * baseRatio);
+        } else if (token2.address === REEF_TOKEN.address) {
+          updateTokens(reefPrice * baseRatio, reefPrice);
         } else {
-          // const sellPool = await poolContract(tokens[0], token1, signer, settings);
           const sellPool = await loadPool(tokens[0], token1, signer, factoryAddress);
           const sellRatio = poolRatio(sellPool);
-          updateTokens(reefPrice / sellRatio, reefPrice / sellRatio * baseRatio);
+          updateTokens(reefPrice * sellRatio, reefPrice * sellRatio * baseRatio);
         }
       } catch (error) {
         console.error(error);
