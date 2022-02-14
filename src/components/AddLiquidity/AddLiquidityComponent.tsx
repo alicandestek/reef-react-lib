@@ -138,7 +138,7 @@ export const AddLiquidityComponent = ({
     if (isLoading) { return; }
     setToken1({ ...token1, amount });
     if (token1.price && token2.price) {
-      const newAmount = token1.price / token2.price * parseFloat(assertAmount(amount));
+      const newAmount = token2.price / token1.price * parseFloat(assertAmount(amount));
       setToken2({ ...token2, amount: !newAmount ? '' : newAmount.toFixed(4) });
     }
   };
@@ -146,7 +146,7 @@ export const AddLiquidityComponent = ({
     if (isLoading) { return; }
     setToken2({ ...token2, amount });
     if (token1.price && token2.price) {
-      const newAmount = token2.price / token1.price * parseFloat(assertAmount(amount));
+      const newAmount = token1.price / token2.price * parseFloat(assertAmount(amount));
       setToken1({ ...token1, amount: !newAmount ? '' : newAmount.toFixed(4) });
     }
   };
@@ -194,6 +194,8 @@ export const AddLiquidityComponent = ({
           addresses: [signer.address],
         });
       }
+      setToken1({...token1, amount: ""});
+      setToken2({...token2, amount: ""});
       // toast.success(`${token1.name}/${token2.name} supply added successfully!`);
     } catch (error) {
       const message = errorHandler(error.message)
