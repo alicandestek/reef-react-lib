@@ -214,6 +214,8 @@ export const SwapComponent = ({
         }
         return contractCall;
       });
+      setBuy({...buy, amount: ""});
+      setSell({...sell, amount: ""});
     } catch (error) {
       if (onTxUpdate) {
         onTxUpdate({
